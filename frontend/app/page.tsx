@@ -8,7 +8,9 @@ import MenCollection from './components/MenCollection';
 import WomenCollection from './components/WomenCollection';
 import About from './components/About';
 import OffersCollection from './components/OffersCollection';
-import Footer from './components/footer';
+import Footer from './components/footer'
+
+
 
 export default function Home() {
   
