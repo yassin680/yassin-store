@@ -12,7 +12,7 @@ export default function Categories({ setView }: CategoriesProps) {
       
         <div className="category-card">
           <div style={{overflow: 'hidden', marginBottom: '25px'}}>
-             <img src="/category_men_perfume.jpg" alt="Parfums Hommes" width="90%" />
+             <img src="/image/19.jpg" alt="Parfums Hommes" width="90%" />
           </div>
           <h3>Hommes</h3>
           <p>Collection exclusive de parfums masculins</p>
@@ -23,7 +23,7 @@ export default function Categories({ setView }: CategoriesProps) {
         {/* Femmes */}
         <div className="category-card">
           <div style={{overflow: 'hidden', marginBottom: '25px'}}>
-            <img src="/category_women_perfume.jpg" alt="Parfums Femmes" width="90%" />
+            <img src="/image/18.jpg" alt="Parfums Femmes" width="90%" />
           </div>
           <h3>Femmes</h3>
           <p>Fragrances élégantes et captivantes</p>
@@ -33,7 +33,7 @@ export default function Categories({ setView }: CategoriesProps) {
         {/* Offres */}
         <div className="category-card">
           <div style={{overflow: 'hidden', marginBottom: '25px'}}>
-            <img src="/category_offers_perfume.jpg" alt="Offres Parfums" width="90%" />
+            <img src="/image/20.jpeg" alt="Offres Parfums" width="90%" />
           </div>
           <h3>Offres</h3>
           <p>Promotions exclusives et coffrets</p>
@@ -44,4 +44,3 @@ export default function Categories({ setView }: CategoriesProps) {
     </section>
   )
 }
-

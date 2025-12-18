@@ -24,7 +24,7 @@ export default function MenCollection({ setView }: CollectionProps) {
         
         {/* Product 1 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <img src="/3.jpg" alt="Oud Royal" style={{ width: '100%', height: '280px', objectFit: 'cover', marginBottom: '30px' }} />
+            <img src="/image/13.jpg" alt="Oud Royal" style={{ width: '90%', }} />
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Oud Royal</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Un parfum emblématique d'oud et d'épices.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$120</div>
@@ -33,7 +33,7 @@ export default function MenCollection({ setView }: CollectionProps) {
 
         {/* Product 2 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <img src="/4.webp" alt="Cuir Intense" style={{ width: '100%', height: '280px', objectFit: 'cover', marginBottom: '30px' }} />
+          <img src="/image/14.jpg" alt="Cuir Intense" style={{ width: '90%',}} />
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Cuir Intense</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Un parfum de cuir audacieux mélangé à la bergamote.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$110</div>
@@ -42,7 +42,7 @@ export default function MenCollection({ setView }: CollectionProps) {
 
         {/* Product 3 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <img src="/8.jpg" alt="Bois Mystique" style={{ width: '100%', height: '280px', objectFit: 'cover', marginBottom: '30px' }} />
+            <img src="/image/15.jpg" alt="Bois Mystique" style={{ width: '90%',  }} />
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Bois Mystique</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Un parfum complexe de bois secs et d'encens.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$105</div>

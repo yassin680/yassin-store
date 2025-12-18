@@ -22,9 +22,9 @@ export default function MenCollection({ setView }: CollectionProps) {
 
       <div className="watch-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
         
-        {/* Product 1 - Video */}
+        {/* Product 1 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <video src="/A.mp4" width="100%" height="280px" autoPlay loop muted playsInline style={{ objectFit: 'cover', marginBottom: '30px' }}></video>
+           <img src="image/31.jpg" alt= "Pack Mystique " width="60%" />
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Pack Mystique</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Coffret exclusif pour les amateurs de bois.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$105</div>
@@ -33,7 +33,7 @@ export default function MenCollection({ setView }: CollectionProps) {
 
         {/* Product 2 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <img src="/9.jpeg" alt="Musc Clair" style={{ width: '100%', height: '280px', objectFit: 'cover', marginBottom: '30px' }} />
+            <img src="/image/28.jpg" alt="Musc Clair" width="60%"/>
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Musc Clair</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Une fragrance propre et fraîche.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$85</div>

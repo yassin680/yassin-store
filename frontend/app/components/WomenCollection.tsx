@@ -23,7 +23,7 @@ export default function MenCollection({ setView }: CollectionProps) {
         
         {/* Product 1 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <img src="/4.webp" alt="Rose Impériale" style={{ width: '100%', height: '280px', objectFit: 'cover', marginBottom: '30px' }} />
+            <img src="/image/23.jpg" alt="Rose Impériale"  width="60%" />
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Rose Impériale</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Un mélange floral délicat de rose de Grasse.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$135</div>
@@ -32,7 +32,7 @@ export default function MenCollection({ setView }: CollectionProps) {
 
         {/* Product 2 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <img src="/7.jpg" alt="Fleur de Nuit" style={{ width: '100%', height: '280px', objectFit: 'cover', marginBottom: '30px' }} />
+            <img src="/image/22.jpg" alt="Fleur de Nuit" width="60%"/>
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Fleur de Nuit</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Tubéreuse et gardénia pour une fragrance mystérieuse.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$125</div>
@@ -41,7 +41,7 @@ export default function MenCollection({ setView }: CollectionProps) {
 
         {/* Product 3 */}
         <div className="watch-card" style={{ background: '#1a1a1a', padding: '45px', textAlign: 'center', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-            <img src="/5.jpeg" alt="Ambre Suprême" style={{ width: '100%', height: '280px', objectFit: 'cover', marginBottom: '30px' }} />
+            <img src="/image/24.jpg" alt="Ambre Suprême" width="60%" />
             <h3 style={{ color: '#D4AF37', fontSize: '26px', marginBottom: '12px' }}>Ambre Suprême</h3>
             <p style={{ color: '#a0a0a0', marginBottom: '25px' }}>Chaleur enveloppante de l'ambre et du santal.</p>
             <div style={{ fontSize: '28px', color: '#F5F5F5', fontWeight: 'bold', marginBottom: '25px' }}>$95</div>
