@@ -2,21 +2,47 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import './signup.css'; 
+import { useRouter } from 'next/navigation'; 
+import './signup.css';
 
 export default function SignupPage() {
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Data to send:', { name, email, password });
-    
-   
-    // await fetch('http://127.0.0.1:8000/api/register', ...)
+
+    try {
+  
+      const res = await fetch('http://127.0.0.1:8000/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert('Account created successfully! Please login.'); 
+        router.push('/login');
+      } else {
+  
+        alert('Error: ' + JSON.stringify(data.message || data));
+      }
+
+    } catch (error) {
+      console.error('An error occurred:', error);
+      alert('Failed to connect to the server.');
+    }
   };
 
   return (
@@ -29,7 +55,6 @@ export default function SignupPage() {
         </div>
 
         <form onSubmit={handleSubmit}>
-   
           <div className="input-group">
             <label>Full Name</label>
             <input 
@@ -42,7 +67,6 @@ export default function SignupPage() {
             />
           </div>
 
-       
           <div className="input-group">
             <label>Email Address</label>
             <input 
@@ -55,7 +79,6 @@ export default function SignupPage() {
             />
           </div>
 
-         
           <div className="input-group">
             <label>Password</label>
             <input 
