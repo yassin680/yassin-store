@@ -11,9 +11,7 @@ export default function Navbar() {
         <li><a href="#home">Accueil</a></li>
         <li><a href="#about">À Propos</a></li>
         <li><a href="#contact">Contact</a></li>
-        <Link href="/login">
-    <button className="btn-login">CONNEXION</button>
-  </Link>
+     <li><Link href="/login">CONNEXION</Link></li>
 
 
       </ul>

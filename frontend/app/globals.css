@@ -3,28 +3,6 @@
 @tailwind utilities;
 
 
-
-
-:root {
-    --color-black: #000;
-    --color-gold: #D4AF37; 
-    --color-light: #F5F5F5;
-    --font-main: 'Playfair Display', serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-main);
-    background: var(--color-black);
-    color: var(--color-light);
-    overflow-x: hidden;
-    transition: direction 0.3s;
-}
  :root {
             --color-black: #000;
             --color-gold: #D4AF37; 

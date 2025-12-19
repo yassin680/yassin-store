@@ -1,74 +1,85 @@
 'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
+import './signup.css'; 
 
 export default function SignupPage() {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Signup data:', { name, email, password });
-    // link with backend will be here. 
+    console.log('Data to send:', { name, email, password });
+    
+   
+    // await fetch('http://127.0.0.1:8000/api/register', ...)
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4">
-      <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">إنشاء حساب جديد</h2>
+    <div className="signup-container">
+      <div className="signup-card">
         
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+        <div className="brand-section">
+          <h1 className="brand-title">RI7A.LUX</h1>
+          <p className="subtitle">Join The Elegance</p>
+        </div>
+
+        <form onSubmit={handleSubmit}>
+   
+          <div className="input-group">
+            <label>Full Name</label>
             <input 
               type="text" 
-              required
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Yassin..."
+              className="custom-input"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+       
+          <div className="input-group">
+            <label>Email Address</label>
             <input 
               type="email" 
-              required
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="name@example.com"
+              className="custom-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Mot de passe</label>
+         
+          <div className="input-group">
+            <label>Password</label>
             <input 
               type="password" 
-              required
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="••••••••"
+              placeholder="Create a password"
+              className="custom-input"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 
-          <button 
-            type="submit"
-            className="w-full bg-green-600 text-white p-2 rounded hover:bg-green-700 transition"
-          >
-            S'inscrire
+          <button type="submit" className="signup-btn">
+            Create Account
           </button>
         </form>
 
-        <p className="mt-4 text-center text-sm text-gray-600">
-    already have account?
-              <Link href="/login" className="text-blue-600 hover:underline">
-            enter here
-          </Link>
-        </p>
+        <div className="login-link">
+          <p>
+            Already have an account?{' '}
+            <Link href="/login">Sign In</Link>
+          </p>
+        </div>
+
       </div>
     </div>
   );
