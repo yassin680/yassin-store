@@ -9,13 +9,16 @@ export default function SignupPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const [message, setMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+  
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setMessage(null); 
 
     try {
-  
       const res = await fetch('http://127.0.0.1:8000/api/register', {
         method: 'POST',
         headers: {
@@ -32,16 +35,22 @@ export default function SignupPage() {
       const data = await res.json();
 
       if (res.ok) {
-        alert('Account created successfully! Please login.'); 
-        router.push('/login');
+      
+        setMessage({ type: 'success', text: 'Account created successfully! You are being redirected to the login page...' });
+        
+
+        setTimeout(() => {
+          router.push('/login'); 
+        }, 2000);
       } else {
-  
-        alert('Error: ' + JSON.stringify(data.message || data));
+     
+        const errorText = data.message || 'An error occurred during recording';
+        setMessage({ type: 'error', text: errorText });
       }
 
     } catch (error) {
-      console.error('An error occurred:', error);
-      alert('Failed to connect to the server.');
+      console.error('Registration error:', error);
+      setMessage({ type: 'error', text: 'Connection to server failed. Please ensure your backend is working.' });
     }
   };
 
@@ -53,6 +62,13 @@ export default function SignupPage() {
           <h1 className="brand-title">RI7A.LUX</h1>
           <p className="subtitle">Join The Elegance</p>
         </div>
+
+        
+        {message && (
+          <div className={`message-box ${message.type === 'success' ? 'success-msg' : 'error-msg'}`}>
+            {message.text}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit}>
           <div className="input-group">

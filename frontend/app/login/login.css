@@ -92,3 +92,33 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+.message-box {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.success-msg {
+  background-color: rgba(16, 185, 129, 0.1); 
+  border: 1px solid #10b981;
+  color: #10b981;
+}
+
+
+.error-msg {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
