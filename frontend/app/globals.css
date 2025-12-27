@@ -657,3 +657,90 @@
                 font-size: 38px;
             }
         }
+
+
+
+        .categories-section {
+  background-color: #000;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* باش يجو مفرقين وحدا بعضياتهم */
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  flex-wrap: wrap; /* باش إلا كانت الشاشة صغيرة يهبطو */
+}
+
+.category-card {
+  flex: 1;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  min-width: 300px;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  border-color: #D4AF37; /* الإطار يولي ذهبي ملي تحط عليه الفارة */
+}
+
+.image-container {
+  width: 100%;
+  height: 250px; /* العلو ديال التصويرة */
+  overflow: hidden;
+}
+
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-img {
+  transform: scale(1.1); /* زووم خفيف فالتصويرة */
+}
+
+.card-content {
+  padding: 30px 20px;
+}
+
+.category-card h3 {
+  font-family: serif;
+  color: #D4AF37;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.category-card p {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.btn-explorer {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-explorer:hover {
+  background-color: #D4AF37;
+  color: #000;
+}
